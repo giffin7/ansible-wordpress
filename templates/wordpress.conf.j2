@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+    ServerName 15.206.195.129
+    DocumentRoot /srv/www/wordpress/
+    <Directory /srv/www/wordpress/>
+        Options FollowSymLinks
+        AllowOverride Limit Options FileInfo
+        DirectoryIndex index.php
+        Require all granted
+    </Directory>
+</VirtualHost>
