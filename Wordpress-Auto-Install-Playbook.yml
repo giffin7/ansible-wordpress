@@ -29,12 +29,6 @@
         - pip
         - python3-mysqldb
 
-    # - name: Install mysql package
-    #   become: yes
-    #   pip:
-    #     name: PyMySQL
-    #     state: present
-
 
     - name: "Restarting and enabling mariadb services"
       service: 
