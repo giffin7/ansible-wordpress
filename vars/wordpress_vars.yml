@@ -1,0 +1,5 @@
+---
+mysqlrpe: "mysqlroot123pass"
+mysql_add_db: "wordpressdb"
+mysql_add_user: "wordpress"
+mysql_add_pass: "wordpress@123"
