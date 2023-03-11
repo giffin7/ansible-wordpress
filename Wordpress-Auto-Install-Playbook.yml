@@ -4,6 +4,11 @@
   become: true
   vars_files:
     - "./vars/wordpress_vars.yml"
+  handlers:
+    - name: restart apache
+      service:
+        name: apache2
+        state: restarted
   tasks:
     - name: Install Dependencies
       apt:
@@ -141,6 +146,8 @@
       template:
         src: "./templates/wordpress.conf.j2"
         dest: "/etc/apache2/sites-available/wordpress.conf"
+      notify:
+      - restart apache
 
            
     - name: Enable WordPress site
